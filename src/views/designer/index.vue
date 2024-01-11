@@ -217,10 +217,10 @@ export default {
       }).catch(() => {});
     },
     loadCacheData(){
-      const loading = this.$loading({
-        lock: true, text: '加载中', spinner: 'el-icon-loading',
-        background: 'rgba(0, 0, 0, 0.7)'
-      });
+      // const loading = this.$loading({
+      //   lock: true, text: '加载中', spinner: 'el-icon-loading',
+      //   background: 'rgba(0, 0, 0, 0.7)'
+      // });
       if ('preview' === env.active){
         const cacheStr = localStorage.getItem('designCache');
         if (cacheStr){
@@ -235,7 +235,7 @@ export default {
         }
         this.designData.version = env.version;
         this.initContainerSize();
-        loading.close();
+        // loading.close();
       }else{
         const id = this.$route.query.id;
         if (id){
@@ -247,10 +247,10 @@ export default {
             }
             this.designData.components = [];
             this.initContainerSize();
-            loading.close();
+            // loading.close();
           })
         }else{
-          this.$message.error('当前为DEV模式，请从管理端进入')
+          // this.$message.error('当前为DEV模式，请从管理端进入')
         }
       }
     },

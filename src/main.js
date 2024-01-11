@@ -5,7 +5,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 import * as echarts from 'echarts';
 import router from './router';
 import dataV from '@jiaminghi/data-view';
-import '@/permission'; // permission control
+// import '@/permission'; // permission control
 import '@/components/register-option'
 import '@/components/register-cpt'
 import '@/assets/font/custom-font.css';
