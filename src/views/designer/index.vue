@@ -276,8 +276,10 @@ export default {
       this.cacheChoices = {}
     },
     submitDesign() {//保存
+      console.log('保存', env)
       if ('preview'===env.active){
         this.designData.components = this.cacheComponents;
+        console.log(this.designData)
         localStorage.setItem('designCache', JSON.stringify(this.designData));
         this.$message.success('已保存')
       }else {

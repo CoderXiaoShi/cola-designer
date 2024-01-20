@@ -67,7 +67,11 @@ export default {
       const that = this;
       const id = this.$route.query.id;
       if (path === '/preview'){
-        let designCache = JSON.parse(localStorage.getItem('designCache'));
+
+        let temp = {"id":"","title":"我的大屏","scaleX":1920,"scaleY":1080,"version":"1.9.0","bgColor":"#2B3340","simpleDesc":"","bgImg":"","viewCode":"","components":[{"cptTitle":"边框","icon":"border","cptKey":"cpt-dataV-border","cptOptionKey":"cpt-dataV-border-option","cptOption":{"attribute":{"borderType":"dv-border-box-1","borderColor1":"#409eff","borderColor2":"#f00","backgroundColor":"rgba(0, 0, 0, 0)","borderTitle":"标题1","titleWidth":250,"dur":3,"reverse":false}},"cptX":419,"cptY":222,"cptZ":100,"cptWidth":400,"cptHeight":300,"id":"71b207d0-b77a-11ee-9e56-8748b18b515a"},{"cptTitle":"文字框","icon":"text","cptKey":"cpt-text","cptOptionKey":"cpt-text-option","cptOption":{"cptDataForm":{"dataText":"{\"value\":\"普通文本\"}","dataSource":1,"pollTime":0,"apiUrl":"/design/test","sql":"select username from sys_user limit 1"},"attribute":{"url":"","textColor":"#4BB344","textSize":16,"fontWeight":"normal","textLineHeight":30,"textFamily":"微软雅黑","textAlign":"center","fontStyle":"normal","textDecoration":"none","bgColor":"rgba(255, 255, 255, 0)"}},"cptX":227,"cptY":191,"cptZ":100,"cptWidth":150,"cptHeight":40,"id":"7258cf20-b77a-11ee-9e56-8748b18b515a"},{"cptTitle":"图片","icon":"image","cptKey":"cpt-image","cptOptionKey":"cpt-image-option","cptOption":{"attribute":{"url":null,"fit":"fill","preview":false}},"cptX":951,"cptY":200,"cptZ":100,"cptWidth":400,"cptHeight":300,"id":"730a44d0-b77a-11ee-9e56-8748b18b515a"}]}
+
+        // let designCache = JSON.parse(localStorage.getItem('designCache'));
+        let designCache = temp
         this.loadDesign(designCache,false);
       }else if(path === '/view'){
         if (!id){
